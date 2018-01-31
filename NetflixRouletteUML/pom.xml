@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>NetflixRouletteUML</groupId>
   <artifactId>NetflixRouletteUML</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${env.TRAVIS_BUILD_NUMBER}-SNAPSHOT</version>
   
   <properties>
 		<!-- version -->
@@ -75,7 +75,7 @@
 					<dependency>
 						  <groupId>NetflixRouletteGenerator</groupId>
 						  <artifactId>NetflixRouletteGenerator</artifactId>
-						  <version>0.0.1-SNAPSHOT</version>
+						  <version>${env.TRAVIS_BUILD_NUMBER}-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 			</plugin>

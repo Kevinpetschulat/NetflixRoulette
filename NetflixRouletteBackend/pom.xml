@@ -5,7 +5,7 @@
 
 	<groupId>NetflixRouletteBackend</groupId>
 	<artifactId>NetflixRouletteBackend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${env.TRAVIS_BUILD_NUMBER}-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>NetflixRouletteBackend</name>
@@ -26,13 +26,36 @@
 	
 	
 	<distributionManagement>
-		<repository>
-			<id>packagecloud-fhv-msi</id>
-			<url>packagecloud+https://packagecloud.io/fhv-msi/sentiment_analysis</url>
+<!-- 		<repository> -->
+<!-- 			<id>packagecloud-fhv-msi</id> -->
+<!-- 			<url>packagecloud+https://packagecloud.io/packagecloud-netflixroulette</url> -->
+<!-- 		</repository> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>packagecloud-fhv-msi</id> -->
+<!-- 			<url>packagecloud+https://packagecloud.io/fhv-msi/sentiment_analysis</url> -->
+<!-- 		</snapshotRepository> -->
+
+
+
+<!-- 	<repository> -->
+<!-- 	    <id>str7946-packagecloud-netfixroulette</id> -->
+<!-- 	    <url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url> -->
+<!-- 	    <releases> -->
+<!-- 	      <enabled>true</enabled> -->
+<!-- 	    </releases> -->
+<!-- 	    <snapshots> -->
+<!-- 	      <enabled>true</enabled> -->
+<!-- 	    </snapshots> -->
+<!-- 	  </repository> -->
+	  
+	  
+	  	<repository>
+			<id>str7946-packagecloud-netfixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
 		</repository>
 		<snapshotRepository>
-			<id>packagecloud-fhv-msi</id>
-			<url>packagecloud+https://packagecloud.io/fhv-msi/sentiment_analysis</url>
+			<id>str7946-packagecloud-netfixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
 		</snapshotRepository>
 	</distributionManagement>
 
