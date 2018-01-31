@@ -48,14 +48,14 @@
 	</pluginRepositories>
 
 	<distributionManagement>
-<repository>
+		<repository>
 	      <id>packagecloud-netflixroulette</id>
 	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>packagecloud-netflixroulette</id>
 	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
-</snapshotRepository>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
