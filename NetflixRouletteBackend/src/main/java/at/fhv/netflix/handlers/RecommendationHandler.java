@@ -90,7 +90,6 @@ public class RecommendationHandler {
 		// End of user code
 	}
 	
-	
 	// Start of user code (user defined operations)
 	
 	// End of user code
