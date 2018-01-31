@@ -23,12 +23,12 @@
 	
 	<distributionManagement>	  
 	  	<repository>
-			<id>str7946-packagecloud-netfixroulette</id>
-			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
+			<id>str7946-packagecloud-netflixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netflixroulette/maven2</url>
 		</repository>
 		<snapshotRepository>
-			<id>str7946-packagecloud-netfixroulette</id>
-			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
+			<id>str7946-packagecloud-netflixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netflixroulette/maven2</url>
 		</snapshotRepository>
 	</distributionManagement>
 
