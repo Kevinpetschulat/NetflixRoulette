@@ -10,7 +10,7 @@
 
 		<!-- generator settings -->
 		<generator.main.class>NetflixRouletteGenerator.main.main</generator.main.class>
-		<generator.uml.model>NetflixRouletteUML.NetflixRouletteUML</generator.uml.model>
+		<generator.uml.model>NetflixRouletteUML.NetflixRouletteUML.uml</generator.uml.model>
 		<generator.output.directory>../NetflixRouletteGenerator</generator.output.directory>
 	</properties>
 
