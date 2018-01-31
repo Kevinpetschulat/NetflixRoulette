@@ -17,6 +17,7 @@ jobs:
         - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
     - stage: build backend
       install:
+        - cd NetflixRouletteBackend
         - cp .travis.settings.xml $HOME/.m2/settings.xml
       script:
         - mvn deploy
