@@ -29,9 +29,9 @@ jobs:
         api_key: $HEROKU_API_KEY
     - stage: deploy to production
       script: skip
+      before_deploy:
+        - cd NetflixRouletteFrontend
       deploy:
-		before_deploy:
-		  - cd NetflixRouletteFrontend
         <<: *heroku
         app: netflixroulette
     - stage: check production availability
