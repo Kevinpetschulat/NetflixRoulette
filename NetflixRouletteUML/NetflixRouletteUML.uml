@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sentimentanalysis="http:///schemas/sentimentanalysis/_sBKzULyEEeeWWO_nb_go1g/1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/sentimentanalysis/_sBKzULyEEeeWWO_nb_go1g/1 sentiment-analysis.profile.uml#_sBVycLyEEeeWWO_nb_go1g">
+  <uml:Model xmi:id="_WBdYMPulEeed6NgIPjJs4A" name="NetflixRouletteUML">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_WLRbgPulEeed6NgIPjJs4A">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VvsRUAEMEeim1Ic1SyI2mw" name="at.fhv.netflix">
+      <packagedElement xmi:type="uml:Package" xmi:id="_BhSFAAEREeim1Ic1SyI2mw" name="endpoints">
+        <packagedElement xmi:type="uml:Class" xmi:id="_ShQ4YAEKEeivNLgJD_H2_A" name="HistoryEndpoint">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_wAjKcAEWEeiNCJi4XDiQYA" name="getHistory">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_4Nrj8AEWEeiNCJi4XDiQYA" name="token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_P_ruoAEZEeiNCJi4XDiQYA" type="_mEjNoAEREeim1Ic1SyI2mw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_an6LMAEREeim1Ic1SyI2mw" name="RecommendationEndpoint">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_fI5JcAEZEeiNCJi4XDiQYA" name="getRecommendation">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_lsmHAAEZEeiNCJi4XDiQYA" type="_nXOWcAEREeim1Ic1SyI2mw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_qrRngAEZEeiNCJi4XDiQYA" name="token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uvgR8AEZEeiNCJi4XDiQYA" name="genreId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_VIccYAESEeim1Ic1SyI2mw" name="AuthEndpoint">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1-YTcAEZEeiNCJi4XDiQYA" name="getToken">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9UovUAEZEeiNCJi4XDiQYA" type="_O0GwgAESEeim1Ic1SyI2mw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_iwy94AEREeim1Ic1SyI2mw" name="models">
+        <packagedElement xmi:type="uml:Class" xmi:id="_mEjNoAEREeim1Ic1SyI2mw" name="History">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_7csrYAEbEeijJ5oicWlVLg" name="items" type="_ITSu4AESEeim1Ic1SyI2mw" association="_7chsQAEbEeijJ5oicWlVLg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7cugkAEbEeijJ5oicWlVLg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7cvHoAEbEeijJ5oicWlVLg" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_nXOWcAEREeim1Ic1SyI2mw" name="Recommendation">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9qQkkAEaEeiNCJi4XDiQYA" name="movieName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_AK1q8AEbEeiNCJi4XDiQYA" name="imageUrl">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CtB64AEbEeiNCJi4XDiQYA" name="description">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ITSu4AESEeim1Ic1SyI2mw" name="HistoryItem">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_3Ih88AEaEeiNCJi4XDiQYA" name="genreId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_FKzZUAElEeijJ5oicWlVLg"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5N7jMAEaEeiNCJi4XDiQYA" name="requested">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hsUSAAElEeijJ5oicWlVLg" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hsa_sAElEeijJ5oicWlVLg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_PhVvUAElEeijJ5oicWlVLg"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-rxPcQEbEeijJ5oicWlVLg" name="result" type="_nXOWcAEREeim1Ic1SyI2mw" association="_-rwBUAEbEeijJ5oicWlVLg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-rxPcgEbEeijJ5oicWlVLg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-rxPcwEbEeijJ5oicWlVLg" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_O0GwgAESEeim1Ic1SyI2mw" name="User">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_sMnpAAEaEeiNCJi4XDiQYA" name="token" aggregation="composite">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ZXb2QAEbEeiNCJi4XDiQYA" name="history" type="_mEjNoAEREeim1Ic1SyI2mw" association="_ZXBmkAEbEeiNCJi4XDiQYA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZXcdUAEbEeiNCJi4XDiQYA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZXdEYAEbEeiNCJi4XDiQYA" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_6vTlcAEREeim1Ic1SyI2mw" name="handlers">
+        <packagedElement xmi:type="uml:Class" xmi:id="_-FCyMAEREeim1Ic1SyI2mw" name="RecommendationHandler">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_NfjewAEaEeiNCJi4XDiQYA" name="getRecommendation">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_NfjewQEaEeiNCJi4XDiQYA" type="_nXOWcAEREeim1Ic1SyI2mw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_NfjewgEaEeiNCJi4XDiQYA" name="token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_NfjewwEaEeiNCJi4XDiQYA" name="genreId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="__tGVIAEREeim1Ic1SyI2mw" name="HistoryHandler">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_KJoEwAEaEeiNCJi4XDiQYA" name="getHistory">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_KJoEwQEaEeiNCJi4XDiQYA" name="token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_KJoEwgEaEeiNCJi4XDiQYA" type="_mEjNoAEREeim1Ic1SyI2mw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_P75lYAEaEeiNCJi4XDiQYA" name="addHistory">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_SPVAkAEaEeiNCJi4XDiQYA" name="token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_VSkIEAEaEeiNCJi4XDiQYA" name="genreId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z1vYUAEaEeiNCJi4XDiQYA" name="result" type="_nXOWcAEREeim1Ic1SyI2mw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X45x0AESEeim1Ic1SyI2mw" name="AuthHandler">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LJJBAAEaEeiNCJi4XDiQYA" name="getToken">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_LJJBAQEaEeiNCJi4XDiQYA" type="_O0GwgAESEeim1Ic1SyI2mw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZXBmkAEbEeiNCJi4XDiQYA" memberEnd="_ZXb2QAEbEeiNCJi4XDiQYA _ZXdEYQEbEeiNCJi4XDiQYA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZXaBEAEbEeiNCJi4XDiQYA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZXaBEQEbEeiNCJi4XDiQYA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ZXdEYQEbEeiNCJi4XDiQYA" type="_O0GwgAESEeim1Ic1SyI2mw" association="_ZXBmkAEbEeiNCJi4XDiQYA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7chsQAEbEeijJ5oicWlVLg" memberEnd="_7csrYAEbEeijJ5oicWlVLg _7cvHoQEbEeijJ5oicWlVLg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7cq2MAEbEeijJ5oicWlVLg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7cq2MQEbEeijJ5oicWlVLg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7cvHoQEbEeijJ5oicWlVLg" type="_mEjNoAEREeim1Ic1SyI2mw" association="_7chsQAEbEeijJ5oicWlVLg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-rwBUAEbEeijJ5oicWlVLg" memberEnd="_-rxPcQEbEeijJ5oicWlVLg _-rx2gAEbEeijJ5oicWlVLg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-rwoYAEbEeijJ5oicWlVLg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-rxPcAEbEeijJ5oicWlVLg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_-rx2gAEbEeijJ5oicWlVLg" type="_ITSu4AESEeim1Ic1SyI2mw" association="_-rwBUAEbEeijJ5oicWlVLg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GLsksAEcEeijJ5oicWlVLg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GLwPEAEcEeijJ5oicWlVLg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_auw4wAEfEeijJ5oicWlVLg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_auyt8AEfEeijJ5oicWlVLg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8QEfEeijJ5oicWlVLg" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8gEfEeijJ5oicWlVLg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8wEfEeijJ5oicWlVLg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt9AEfEeijJ5oicWlVLg" key="Date" value="2017-10-29"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt9QEfEeijJ5oicWlVLg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_auxf0AEfEeijJ5oicWlVLg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="sentiment-analysis.profile.uml#_sBVycLyEEeeWWO_nb_go1g"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="sentiment-analysis.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
+    </profileApplication>
+  </uml:Model>
+  <sentimentanalysis:Endpoint xmi:id="_cDTp0AEfEeijJ5oicWlVLg" base_Class="_ShQ4YAEKEeivNLgJD_H2_A"/>
+  <sentimentanalysis:Endpoint xmi:id="_ehVygAEfEeijJ5oicWlVLg" base_Class="_VIccYAESEeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Endpoint xmi:id="_f3Ju4AEfEeijJ5oicWlVLg" base_Class="_an6LMAEREeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Handler xmi:id="_hVy3IAEfEeijJ5oicWlVLg" base_Class="__tGVIAEREeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Handler xmi:id="_iUCoEAEfEeijJ5oicWlVLg" base_Class="_-FCyMAEREeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Handler xmi:id="_i5jv8AEfEeijJ5oicWlVLg" base_Class="_X45x0AESEeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Model xmi:id="_qDg1MAEfEeijJ5oicWlVLg" base_Class="_O0GwgAESEeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Model xmi:id="_qpnL4AEfEeijJ5oicWlVLg" base_Class="_mEjNoAEREeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Model xmi:id="_rWNzMAEfEeijJ5oicWlVLg" base_Class="_ITSu4AESEeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Model xmi:id="_sJYVgAEfEeijJ5oicWlVLg" base_Class="_nXOWcAEREeim1Ic1SyI2mw"/>
+  <sentimentanalysis:Write xmi:id="_yIzhUAEfEeijJ5oicWlVLg" path="recommendation" base_Operation="_fI5JcAEZEeiNCJi4XDiQYA"/>
+  <sentimentanalysis:Read xmi:id="_1gWE4AEfEeijJ5oicWlVLg" path="history" base_Operation="_wAjKcAEWEeiNCJi4XDiQYA"/>
+  <sentimentanalysis:Write xmi:id="_3rP2MAEfEeijJ5oicWlVLg" path="login" base_Operation="_1-YTcAEZEeiNCJi4XDiQYA"/>
+</xmi:XMI>

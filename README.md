@@ -1,1 +1,2 @@
-# NetflixRoulette
+- History 
+- Random movie 

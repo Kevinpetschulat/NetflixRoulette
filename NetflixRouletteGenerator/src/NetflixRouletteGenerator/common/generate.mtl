@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+
+[import NetflixRouletteGenerator::endpoint::endpoint]
+[import NetflixRouletteGenerator::handler::handler]
+[import NetflixRouletteGenerator::main::main]
+[import NetflixRouletteGenerator::model::model]
+
+
+[**
+ * Generate the application based on the given model
+ * @param aModel The model which is used to generate the application
+ */]
+[template public main(aModel : Model)]
+	
+	[comment @main /]
+	[aModel.generateMain()/]
+
+	[for (aPackage : Package | aModel.eAllContents(Package))]
+		[for (aClass : Class | aPackage.packagedElement->filter(Class))]
+			[aClass.generateEndpoint()/]
+			[aClass.generateHandler()/]
+			[aClass.generateModel()/]
+		[/for]
+	[/for]
+[/template]
