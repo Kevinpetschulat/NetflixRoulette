@@ -10,7 +10,6 @@ jobs:
     - stage: uml	
       language: java
       script:
-        - cd ..
         - cd NetflixRouletteUML
         - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
     - stage: build backend
