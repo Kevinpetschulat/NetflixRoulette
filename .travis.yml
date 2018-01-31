@@ -30,6 +30,8 @@ jobs:
     - stage: deploy to production
       script: skip
       deploy:
+		before_deploy:
+		  - cd NetflixRouletteFrontend
         <<: *heroku
         app: netflixroulette
     - stage: check production availability
