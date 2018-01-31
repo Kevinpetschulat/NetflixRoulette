@@ -1,4 +1,4 @@
-language: java
+$HOME/.m2/settings.xmllanguage: java
 
 
 jobs:
@@ -31,4 +31,5 @@ jobs:
       deploy:
         <<: *heroku
         app: netflixroulette
-
+    - stage: check production availability
+      script: 'curl https://netflixroulette.herokuapp.com/'
