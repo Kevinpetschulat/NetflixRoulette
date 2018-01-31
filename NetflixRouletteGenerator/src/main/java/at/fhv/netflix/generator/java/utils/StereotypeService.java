@@ -1,4 +1,4 @@
-package NetflixRouletteGenerator.util;
+package at.fhv.netflix.generator.java.utils;
 
 import java.util.List;
 

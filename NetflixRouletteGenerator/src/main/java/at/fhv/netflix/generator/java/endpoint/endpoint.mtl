@@ -4,12 +4,12 @@
  */]
 [module endpoint('http://www.eclipse.org/uml2/5.0.0/UML')]
 
-[import NetflixRouletteGenerator::util::stereotypeservice/]
-[import NetflixRouletteGenerator::util::pathutil/]
-[import NetflixRouletteGenerator::util::common/]
-[import NetflixRouletteGenerator::util::attributes/]
-[import NetflixRouletteGenerator::util::declaration/]
-[import NetflixRouletteGenerator::util::type/]
+[import at::fhv::netflix::generator::java::utils::stereotypeservice/]
+[import at::fhv::netflix::generator::java::utils::pathutil/]
+[import at::fhv::netflix::generator::java::utils::common/]
+[import at::fhv::netflix::generator::java::utils::attributes/]
+[import at::fhv::netflix::generator::java::utils::declaration/]
+[import at::fhv::netflix::generator::java::utils::type/]
 
 [**
  * Generate the endpoint for the given class

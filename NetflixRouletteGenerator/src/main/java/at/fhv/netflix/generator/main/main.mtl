@@ -1,12 +1,13 @@
 [comment encoding = UTF-8 /]
-[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+[**
+ * Main module which is the basis for the acceleo generator
+ */]
+[module main('http://www.eclipse.org/uml2/5.0.0/UML')/]
 
-
-[import NetflixRouletteGenerator::endpoint::endpoint]
-[import NetflixRouletteGenerator::handler::handler]
-[import NetflixRouletteGenerator::main::main]
-[import NetflixRouletteGenerator::model::model]
-
+[import at::fhv::netflix::generator::java::endpoint::endpoint/]
+[import at::fhv::netflix::generator::java::handler::handler/]
+[import at::fhv::netflix::generator::java::main::main/]
+[import at::fhv::netflix::generator::java::model::model/]
 
 [**
  * Generate the application based on the given model

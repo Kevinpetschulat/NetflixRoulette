@@ -1,12 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>NetflixRoulette</groupId>
-  <artifactId>NetflixRouletteGenerator</artifactId>
-  <version>${env.TRAVIS_BUILD_NUMBER}-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>at.fhv</groupId>
+	<artifactId>NetflixRouletteGenerator</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<properties>
 		<!-- version -->
 		<acceleo.version>3.6.4</acceleo.version>
 		<uml.version>5.0.2.v20150202-0947</uml.version>
@@ -47,14 +48,14 @@
 	</pluginRepositories>
 
 	<distributionManagement>
-	    <repository>
+<repository>
 	      <id>packagecloud-netflixroulette</id>
 	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>packagecloud-netflixroulette</id>
 	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
-	    </snapshotRepository>
+</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
@@ -120,7 +121,7 @@
 						<root>${project.basedir}</root>
 						<entries>
 							<entry>
-								<input>src</input>
+								<input>src/main/java</input>
 								<output>target/classes</output>
 							</entry>
 						</entries>
@@ -140,7 +141,4 @@
 			</extension>
 		</extensions>
 	</build>
-	
-	
-	
 </project>

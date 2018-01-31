@@ -2,5 +2,5 @@
 [module javatypeservice('http://www.eclipse.org/uml2/5.0.0/UML')/]
 
 [query public getJavaType(arg0 : TypedElement) : String
-	= invoke('NetflixRouletteGenerator.util.JavaTypeService', 'getJavaType(org.eclipse.uml2.uml.TypedElement)', Sequence{arg0})
+	= invoke('at.fhv.netflix.generator.java.utils.JavaTypeService', 'getJavaType(org.eclipse.uml2.uml.TypedElement)', Sequence{arg0})
 /]

@@ -1,9 +1,9 @@
 [comment encoding = UTF-8 /]
 [module declaration('http://www.eclipse.org/uml2/5.0.0/UML')]
 
-[import NetflixRouletteGenerator::util::common /]
-[import NetflixRouletteGenerator::util::type /]
-[import NetflixRouletteGenerator::util::request /]
+[import at::fhv::netflix::generator::java::utils::common /]
+[import at::fhv::netflix::generator::java::utils::type /]
+[import at::fhv::netflix::generator::java::utils::request /]
 
 [template public genSingleton(aClass : Class)]
 private static [aClass.genName()/] INSTANCE;

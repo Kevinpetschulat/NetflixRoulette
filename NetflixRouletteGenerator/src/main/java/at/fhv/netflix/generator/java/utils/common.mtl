@@ -1,7 +1,7 @@
 [comment encoding = UTF-8 /]
 [module common('http://www.eclipse.org/uml2/5.0.0/UML')]
 
-[import NetflixRouletteGenerator::util::pathutil/]
+[import at::fhv::netflix::generator::java::utils::pathutil/]
 
 [**
  * Generate the name of an element
