@@ -32,6 +32,7 @@ $(function() {
                         token: localStorage.getItem('token')
                     },
                     success: function (response) {
+					  $("#history").html('');
 
                       for (var i = 0; i < response.items.length; i++) {
                         var movie = response.items[i].result;
