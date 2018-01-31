@@ -1,50 +1,32 @@
 jobs:
   include:
+    - stage: generator
+      language: java
+      install:
+        - cp .travis.settings.xml $HOME/.m2/settings.xml
+      script:
+    - cd NetflixRouletteGenerator
+        - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven:acceleo-compile deploy
+    - stage: uml	
+      language: java
+      script:
+    - cd ..
+        - cd NetflixRouletteUML
+        - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
     - stage: build backend
       install:
         - cp .travis.settings.xml $HOME/.m2/settings.xml
       script:
         - mvn deploy
-    - stage: static code analysis
-      addons:
-        sonarcloud:
-          organization: fhv-msi-github
-          token: $SONAR_TOKEN
-      script:
-        - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
-        - cd ..
-        - "git clone https://github.com/fhv-msi/sentiment-analysis-docs.git"
-        - rm -rf sentiment-analysis-docs/generated/jacoco-ut sentiment-analysis-docs/generated/jacoco-it sentiment-analysis-docs/generated/apidocs
-        - cp -r sentiment-analysis-backend/target/site/jacoco-ut sentiment-analysis-docs/generated/
-        - cp -r sentiment-analysis-backend/target/site/jacoco-it sentiment-analysis-docs/generated/
-        - cp -r sentiment-analysis-backend/target/site/apidocs sentiment-analysis-docs/generated/
-        - cd sentiment-analysis-docs/generated
-        - git add --all
-        - git commit -am "update documentation"
-        - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/fhv-msi/sentiment-analysis-docs.git" master
     - stage: deploy to staging
       script: skip
       deploy: &heroku
         provider: heroku
-        app: fhv-backend-staging
+        app: netflixroulette
         api_key: $HEROKU_API_KEY
-    - stage: automatic user acceptance tests on staging
-      script:
-        - cd ..
-        - "git clone https://github.com/fhv-msi/sentiment-analysis-tests.git"
-        - cd sentiment-analysis-tests
-        - mvn verify
-        - cd ..
-        - "git clone https://github.com/fhv-msi/sentiment-analysis-docs.git"
-        - rm -rf sentiment-analysis-docs/generated/cukedoctor sentiment-analysis-docs/generated/walk_through.mp4
-        - cp -r sentiment-analysis-tests/target/cukedoctor sentiment-analysis-docs/generated/
-        - cd sentiment-analysis-docs/generated
-        - ../../sentiment-analysis-tests/scripts/get_testingbot_video.py
-        - git add --all
-        - git commit -am "update documentation"
-        - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/fhv-msi/sentiment-analysis-docs.git" master
     - stage: deploy to production
       script: skip
       deploy:
         <<: *heroku
-        app: fhv-backend
+        app: netflixroulette
+
