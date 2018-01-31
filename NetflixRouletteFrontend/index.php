@@ -84,6 +84,6 @@
 			<script src="assets/js/main.js"></script>
 
 
-		<script src="assets/js/app.js" data-backend="<?php getenv("PROD_BACKEND") ?>"></script>
+		<script src="assets/js/app.js" data-backend="<?php echo getenv("PROD_BACKEND"); ?>"></script>
 	</body>
 </html>
