@@ -10,8 +10,8 @@
 		<acceleo.version>3.6.4</acceleo.version>
 
 		<!-- generator settings -->
-		<generator.main.class>NetflixRouletteGenerator.common.Generate</generator.main.class>
-		<generator.uml.model>NetflixRouletteUML.uml</generator.uml.model>
+		<generator.main.class>at.fhv.netflix.generator.main.Main</generator.main.class>
+		<generator.uml.model>/NetflixRouletteUML/NetflixRouletteUML.uml</generator.uml.model>
 		<generator.output.directory>../NetflixRouletteBackend</generator.output.directory>
 	</properties>
 
