@@ -21,14 +21,18 @@ jobs:
       script:
         - cd NetflixRouletteBackend
         - mvn deploy
-    - stage: deploy to staging
+    - stage: deploy to production (backend)
       script: skip
+      before_deploy:
+        - cd NetflixRouletteBackend
       deploy: &heroku
         provider: heroku
-        app: netflixroulette
+        app: netflixroulette-backend
         api_key: $HEROKU_API_KEY
-    - stage: deploy to production
+    - stage: deploy to production (frontend)
       script: skip
+      before_deploy:
+        - cd NetflixRouletteFrontend
       deploy:
         <<: *heroku
         app: netflixroulette
