@@ -50,11 +50,11 @@
 	<distributionManagement>
 		<repository>
 	      <id>packagecloud-netflixroulette</id>
-	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
+	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netflixroulette</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>packagecloud-netflixroulette</id>
-	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netfixroulette</url>
+	      <url>packagecloud+https://packagecloud.io/str7946/packagecloud-netflixroulette</url>
 		</snapshotRepository>
 	</distributionManagement>
 

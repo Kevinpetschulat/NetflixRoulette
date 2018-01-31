@@ -29,8 +29,8 @@
 			<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 		</repository>
 		<repository>
-			<id>str7946-packagecloud-netfixroulette</id>
-			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
+			<id>str7946-packagecloud-netflixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netflixroulette/maven2</url>
 		</repository>
 	</repositories>
 
@@ -48,8 +48,8 @@
 			<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 		</pluginRepository>
 		<pluginRepository>
-			<id>str7946-packagecloud-netfixroulette</id>
-			<url>https://packagecloud.io/str7946/packagecloud-netfixroulette/maven2</url>
+			<id>str7946-packagecloud-netflixroulette</id>
+			<url>https://packagecloud.io/str7946/packagecloud-netflixroulette/maven2</url>
 		</pluginRepository>
 	</pluginRepositories>
 
