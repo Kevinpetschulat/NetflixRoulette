@@ -381,6 +381,10 @@
                 <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_LJJBAAEaEeiNCJi4XDiQYA"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_LJMrYQEaEeiNCJi4XDiQYA"/>
               </children>
+              <children xmi:type="notation:Shape" xmi:id="_yMbRAAdJEei_5b50z0khGw" type="Operation_ClassOperationLabel">
+                <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_yInvEAdJEei_5b50z0khGw"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_yMbRAQdJEei_5b50z0khGw"/>
+              </children>
               <styles xmi:type="notation:TitleStyle" xmi:id="_X5K3mQESEeim1Ic1SyI2mw"/>
               <styles xmi:type="notation:SortingStyle" xmi:id="_X5K3mgESEeim1Ic1SyI2mw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_X5K3mwESEeim1Ic1SyI2mw"/>

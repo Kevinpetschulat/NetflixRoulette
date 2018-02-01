@@ -28,29 +28,41 @@ public class AuthHandler {
 		// Start of user code getToken
 		at.fhv.netflix.models.User user = new at.fhv.netflix.models.User(); 
 		
+		String token = generateNewToken(); 
+		user.setToken(token); 
+        	user.setHistory(new at.fhv.netflix.models.History());
+        users.put(token, user);
+	
+		return user; 
+		// End of user code
+	}
+	
+	
+	// Start of user code (user defined operations)
+	
+	// Get the user by token or return null if the user does not exist
+	public at.fhv.netflix.models.User getUser (String token) throws Exception {
+		if (!users.containsKey(token)) {
+			return null; 
+		}
+		
+        return users.get(token);
+    }
+	
+	private String generateNewToken() {
 		java.util.Random rand = new java.util.Random(); 
 		int min = 1000; 
 		int max = 1000000; 
 		int randomNum = rand.nextInt((max - min) + 1) + min;	// nextInt is normally exclusive of the top value, so add 1 to make it inclusive
 		String token = "user"+randomNum; 
 	
-		if (!users.containsKey(token)) {
-			user.setToken(token); 
-	        	user.setHistory(new at.fhv.netflix.models.History());
-	        users.put(token, user);
-	    }
-		
-		return user; 
-		// End of user code
-	}
-	
-	// Start of user code (user defined operations)
-	public at.fhv.netflix.models.User getUser(String token) throws Exception{
-		if(!users.containsKey(token)) {
-			throw new Exception("Unknown token");
+		while(users.containsKey(token)) {
+			randomNum = rand.nextInt((max - min) + 1) + min;	
+			token = "user"+randomNum; 
 		}
-        return users.get(token);
-    }
+		
+		return token; 
+	}
 	// End of user code
 	
 }
