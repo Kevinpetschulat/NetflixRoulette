@@ -2,11 +2,11 @@ package at.fhv.netflix.handlers;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import at.fhv.netflix.models.Recommendation;
 
 // Unit test for history handler
 public class HistoryHandlerTest {
+	
 	@Test
 	public void testSingleton() {
 		Assert.assertNotNull(HistoryHandler.getInstance());
@@ -29,7 +29,6 @@ public class HistoryHandlerTest {
 		Assert.assertNotNull(token);
 	}
 
-	
 	@Test
 	public void testGetHistory() {
 		HistoryHandler handler = HistoryHandler.getInstance(); 

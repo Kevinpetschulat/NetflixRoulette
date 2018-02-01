@@ -37,7 +37,7 @@ public class RecommendationHandler {
 		// Start of user code getRecommendation
 		
 		if (token == null || "".equals(token)) {
-			throw new Exception("Not authenticated");
+			return null; 
 		}
 
 		Gson gson = new GsonBuilder().create();
