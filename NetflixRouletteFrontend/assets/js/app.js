@@ -37,7 +37,7 @@ $(function() {
                       for (var i = 0; i < response.items.length; i++) {
                         var movie = response.items[i].result;
                         $("#history").append('<article class="6u 12u$(xsmall) work-item">' +
-                                '<a href="images/fulls/01.jpg" class="image fit thumb"><img src="' + movie.imageUrl + '" title="' + movie.movieName + '" /></a>' +
+                                '<img src="' + movie.imageUrl + '" title="' + movie.movieName + '"  class="image fit thumb" />' +
                                 '<h3>' + movie.movieName + '</h3>' +
                                 '<p>' + movie.description + '</p>' +
                             '</article>');
