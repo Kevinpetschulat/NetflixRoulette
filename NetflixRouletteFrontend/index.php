@@ -18,8 +18,8 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<h1 id="recMovie">YOUR movie</h1>
-					<p id="recDesc">Descrption</p>
+					<h1 id="recMovie" class="movieDetails"></h1>
+					<p id="recDesc" class="movieDetails"></p>
 				</div>
 			</header>
 
@@ -29,7 +29,7 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Find YOUR movie!</h2>
+							<h2>Netflix Roulette</h2>
 						</header>
 						<p>Please select your genre:</p>
 
