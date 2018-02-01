@@ -71,4 +71,19 @@ public class AuthHandlerTest {
 		User user = handler.getUser("some invalid token"); 
 		Assert.assertNull(user);
 	}
+	
+	// This will create a new token in the backend where the user can get his user model 
+	@Test
+	public void testLogin() throws Exception  {
+		AuthHandler handler = AuthHandler.getInstance(); 
+		
+		// Login and create token
+		User freshUser = handler.getToken(); 
+		Assert.assertNotNull(freshUser);
+		String token = freshUser.getToken(); 
+		
+		// Use this token and try to get the user by the token
+		User savedUser = handler.getUser(token); 
+		Assert.assertNotNull(savedUser);
+	}
 }
