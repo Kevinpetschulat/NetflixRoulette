@@ -39,15 +39,15 @@ public class AuthHandler {
 	
 	
 	// Start of user code (user defined operations)
-	
 	// Get the user by token or return null if the user does not exist
-	public at.fhv.netflix.models.User getUser (String token) throws Exception {
+	public at.fhv.netflix.models.User getUser (String token) throws Exception {			// TODO this should be generated and not created manually. 
 		if (!users.containsKey(token)) {
 			return null; 
 		}
 		
         return users.get(token);
     }
+	
 	
 	private String generateNewToken() {
 		java.util.Random rand = new java.util.Random(); 

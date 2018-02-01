@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import at.fhv.netflix.models.User; 
 
+
+// Unit test for auth handler
 public class AuthHandlerTest {
 
 	// Test the get instance function
@@ -11,7 +13,6 @@ public class AuthHandlerTest {
 	public void testSingleton() {
 		Assert.assertNotNull(AuthHandler.getInstance());
 	}
-	
 	
 	// Test get token function
 	@Test
@@ -24,104 +25,51 @@ public class AuthHandlerTest {
 		Assert.assertFalse(newUserWithToken.getToken().isEmpty()); 
 	}
 
+	// Test get user function: function returns valid user
+	// Demo user will be manually created in this test 
+	@Test
+	public void testGetUserByValidToken1() throws Exception {
+		AuthHandler handler = AuthHandler.getInstance();
+		
+		// Create demo user 
+		String demoToken = "user-234"; 
+		User testUser = new User(); 
+		testUser.setToken(demoToken);
+		handler.users.put(demoToken, testUser); 
+		
+		User resultUser = handler.getUser(demoToken); 
+		Assert.assertNotNull(resultUser);
+	}
+
+	// Test get user function: function returns valid user
+	// Demo user will be automatically created in this test
+	@Test
+	public void testGetUserByValidToken2() throws Exception {
+		AuthHandler handler = AuthHandler.getInstance();
+		
+		// Create demo user 
+		User demoUser = handler.getToken(); 
+		String demoToken = demoUser.getToken(); 
+		
+		User resultUser = handler.getUser(demoToken); 
+		Assert.assertNotNull(resultUser);
+	}
 	
+	// Test get user function: token is null
+	@Test
+	public void testGetUserByNullToken() throws Exception {
+		AuthHandler handler = AuthHandler.getInstance();
+		
+		User user = handler.getUser(null); 
+		Assert.assertNull(user);
+	}
 	
-	// TODO Test get user function
-	
-	
-	
-	
-	// Test the logout function 
-//	@Test
-//	public void testLogout() throws Exception {
-//		String exampleEmail = "hugo@example.com"; 
-//		
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put(exampleEmail, new User());
-//		handler.logout(exampleEmail);
-//		Assert.assertFalse(handler.users.containsKey(exampleEmail));
-//	}
-//
-//	/**
-//	 * Test logout with empty token
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testLogoutEmptyMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put("user@test.com", new User());
-//		handler.logout("");
-//	}
-//
-//	/**
-//	 * Test logout with null token
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testLogoutNullMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put("user@test.com", new User());
-//		handler.logout(null);
-//	}
-//
-//	/**
-//	 * Test successful user loading
-//	 */
-//	@Test
-//	public void testGetUser() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put("user@test.com", new User());
-//		Assert.assertNotNull(handler.getUser("user@test.com"));
-//	}
-//
-//	/**
-//	 * Test user loading with empty token
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testGetUserEmptyMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put("user@test.com", new User());
-//		handler.getUser("");
-//	}
-//
-//	/**
-//	 * Test user loading with null token
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testGetUserNullMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.users.put("user@test.com", new User());
-//		handler.getUser(null);
-//	}
-//
-//	/**
-//	 * Test successful user login
-//	 */
-//	@Test
-//	public void testLogin() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		String token = handler.login("user@test.com");
-//		Assert.assertNotNull(token);
-//		Assert.assertNotEquals("", token);
-//
-//		User user = handler.users.get(token);
-//		Assert.assertEquals("user@test.com", user.getEmail());
-//		Assert.assertNotNull(user.getHistory());
-//	}
-//
-//	/**
-//	 * Test user login with empty mail
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testLoginEmptyMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.login("");
-//	}
-//	
-//	/**
-//	 * Test user login with null mail
-//	 */
-//	@Test(expected = Exception.class)
-//	public void testLoginNullMail() throws Exception {
-//		AuthHandler handler = AuthHandler.getInstance();
-//		handler.login(null);
-//	}
+	// Test get user function: token is an invalid string
+	@Test
+	public void testGetUserByInvalidToken() throws Exception {
+		AuthHandler handler = AuthHandler.getInstance();
+		
+		User user = handler.getUser("some invalid token"); 
+		Assert.assertNull(user);
+	}
 }
