@@ -51,7 +51,15 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent suggestions</h2>
-						<div class="row" id="history"></div>
+						<div class="row" id="history">
+						<article class="6u 12u$(xsmall) work-item">
+							<a href="images/fulls/01.jpg" class="image fit thumb">
+								<img src="https://img.reelgood.com/content/movie/c6779196-80b6-4f23-8cbd-95b542158a59/poster-780.webp" title="Hard Target 2">
+							</a>
+							<h3>Hard Target 2</h3>
+							<p>Forced into a deadly cat-and-mouse game, a disgraced mixed martial arts fighter is hunted through the jungles of Southeast Asia.</p>
+						</article>
+						</div>
 					</section>
 			</div>
 
