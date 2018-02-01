@@ -18,8 +18,8 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<h1 id="recMovie">YOUR movie</h1>
-					<p id="recDesc">Descrption</p>
+					<h1 id="recMovie" class="movieDetails"></h1>
+					<p id="recDesc" class="movieDetails"></p>
 				</div>
 			</header>
 
@@ -29,7 +29,7 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Find YOUR movie!</h2>
+							<h2>Netflix Roulette</h2>
 						</header>
 						<p>Please select your genre:</p>
 
@@ -51,18 +51,7 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent suggestions</h2>
-						<div class="row" id="history">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
+						<div class="row" id="history"></div>
 					</section>
 			</div>
 
@@ -84,6 +73,6 @@
 			<script src="assets/js/main.js"></script>
 
 
-		<script src="assets/js/app.js" data-backend="<?php getenv("PROD_BACKEND") ?>"></script>
+		<script src="assets/js/app.js" data-backend="<?php echo getenv("PROD_BACKEND"); ?>"></script>
 	</body>
 </html>
