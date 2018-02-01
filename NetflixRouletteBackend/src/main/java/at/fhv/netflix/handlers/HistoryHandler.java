@@ -27,7 +27,7 @@ public class HistoryHandler {
 	public at.fhv.netflix.models.History getHistory(String token) throws Exception {
 		// Start of user code getHistory
 		if(token == null || "".equals(token)) {
-			throw new Exception("Token must not be empty");
+			return null; 
 		}
 		
 		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
