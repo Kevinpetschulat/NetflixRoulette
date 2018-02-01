@@ -5,6 +5,7 @@ import org.junit.Test;
 import at.fhv.netflix.models.Recommendation;
 import at.fhv.netflix.models.User;
 
+// Unit test for recommendation handler 
 public class RecommendationHandlerTest {
 
 	@Test

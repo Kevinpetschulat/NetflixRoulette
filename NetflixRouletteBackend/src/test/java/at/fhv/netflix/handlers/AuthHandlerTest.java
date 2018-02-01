@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import at.fhv.netflix.models.User; 
 
+// Unit test for auth handler 
 public class AuthHandlerTest {
 
 	// Test the get instance function
