@@ -9,16 +9,20 @@ import at.fhv.netflix.models.User;
 //integration test for history endpoint
 public class HistoryEndpointIT {
 
-	@Test(expected = Exception.class)
+	@Test
 	public void testGetHistoryNullToken() throws Exception {
 		HistoryEndpoint endpoint = new HistoryEndpoint();
-		endpoint.getHistory(null);
+		History h = endpoint.getHistory(null);
+		
+		Assert.assertNull(h);
 	}
 	
-	@Test(expected = Exception.class)
+	@Test
 	public void testGetHistoryEmptyToken() throws Exception {
 		HistoryEndpoint endpoint = new HistoryEndpoint();
-		endpoint.getHistory("");
+		History h = endpoint.getHistory("");
+		
+		Assert.assertNull(h);
 	}
 	
 	@Test

@@ -1,6 +1,6 @@
 [comment encoding = UTF-8 /]
 [**
- * This module generates the main class in Go for starting/running the application
+ * This module generates the main class in Java for starting/running the application
  */]
 [module main('http://www.eclipse.org/uml2/5.0.0/UML')]
 
