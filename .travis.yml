@@ -29,6 +29,10 @@ jobs:
         provider: heroku
         app: netflixroulette-backend-stage
         api_key: $HEROKU_API_KEY
+    - stage: Unit test for backend (staging) 
+      script:
+        - cd NetflixRouletteBackend
+        - mvn verify
     - stage: deploy to production (backend)
       script: skip
       before_deploy:
