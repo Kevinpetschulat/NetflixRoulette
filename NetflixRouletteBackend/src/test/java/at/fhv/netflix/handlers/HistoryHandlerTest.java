@@ -3,6 +3,7 @@ package at.fhv.netflix.handlers;
 import org.junit.Assert;
 import org.junit.Test;
 import at.fhv.netflix.models.Recommendation;
+import at.fhv.netflix.models.User;
 
 // Unit test for history handler
 public class HistoryHandlerTest {
@@ -54,13 +55,18 @@ public class HistoryHandlerTest {
 		Assert.assertNull(e);
 	}
 	
-	private String addDummyHistoryItem(HistoryHandler handler) throws Exception {
+	private String addDummyHistoryItem(HistoryHandler historyHandler) throws Exception {
+		
+		// Create user because it has to exist in the backend 
+		AuthHandler authHandler = AuthHandler.getInstance(); 
+		User newUser = authHandler.getToken(); 
+		
 		// Create dummy data for the test. 
-		String demoToken = "user-123"; 
+		String demoToken = newUser.getToken(); 
 		int demoGenreID = 17; 
 		Recommendation demoRecommendation = new Recommendation(); 
 		demoRecommendation.setMovieName("This is a unit test");
-		handler.addHistory(demoToken, demoGenreID, demoRecommendation);
+		historyHandler.addHistory(demoToken, demoGenreID, demoRecommendation);
 		
 		return demoToken; 
 	}
