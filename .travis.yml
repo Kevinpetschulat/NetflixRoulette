@@ -14,7 +14,7 @@ jobs:
       language: java
       script:
         - cd NetflixRouletteUML
-        - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
+        - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher
     - stage: build backend
       install:
         - cp .travis.settings.xml $HOME/.m2/settings.xml
@@ -31,7 +31,7 @@ jobs:
         - cd NetflixRouletteBackend
         - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
         - cd ..
-        - "git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git"
+        - git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git
         - rm -rf NetflixRouletteDocs/generated/jacoco-ut NetflixRouletteDocs/generated/jacoco-it NetflixRouletteDocs/generated/apidocs
         - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
