@@ -36,6 +36,10 @@ jobs:
         - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/apidocs NetflixRouletteDocs/generated/
+        - cd NetflixRouletteDocs/generated
+        - git add --all
+        - git commit -am "update documentation"
+        - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRoulette.git" master
     - stage: deploy code docs
       script: skip
       before_deploy:
