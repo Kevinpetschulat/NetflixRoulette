@@ -57,7 +57,7 @@ jobs:
         provider: heroku
         app: netflixroulette-backend-stage
         api_key: $HEROKU_API_KEY
-    - stage: Unit test for backend (staging)
+    - stage: Unit test for backend
       script:
         - cd NetflixRouletteBackend
         - mvn verify
@@ -85,3 +85,4 @@ jobs:
         app: netflixroulette
     - stage: check production availability
       script: 'curl https://netflixroulette.herokuapp.com/'
+      script: 'curl https://netflixroulette-docs.herokuapp.com/generated/index.html'
