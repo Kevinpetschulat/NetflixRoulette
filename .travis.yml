@@ -21,6 +21,20 @@ jobs:
       script:
         - cd NetflixRouletteBackend
         - mvn deploy
+- stage: static code analysis
+      addons:
+        sonarcloud:
+          organization: str7946-github
+          token: $SONAR_TOKEN
+      script:
+	- cd NetflixRouletteBackend
+        - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
+	- cd .. 
+	- rm -rf NetflixRouletteDocs
+	- mkdir -p NetflixRouletteDocs/generated 
+        - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
+        - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
+        - cp -r NetflixRouletteBackend/target/site/apidocs NetflixRouletteDocs/generated/
     - stage: deploy to staging (backend)
       script: skip
       before_deploy:
