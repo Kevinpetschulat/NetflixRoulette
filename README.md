@@ -1,5 +1,15 @@
-Webapplication: Netflix Roulette for testing Model Driven Architecture with Papyrus and Acceleo with Continous Delivery (Travis CI and Heroku). 
+# Netflix Roulette
+Webapplication for testing model driven architecture (Papyrus, Acceleo) and continuous delivery (Travis CI, Heroku). 
 
-Generated static code documentation: https://netflixroulette-docs.herokuapp.com/generated/index.html
+##Static code documentation: 
+https://netflixroulette-docs.herokuapp.com/generated/index.html
 
-Frontend for webapplication: https://netflixroulette.herokuapp.com/
+##Frontend for webapplication: 
+https://netflixroulette.herokuapp.com/
+
+
+UML that is used to generate the spring boot backend: 
+![UML](https://github.com/Kevinpetschulat/NetflixRoulette/blob/master/vendor/uml.jpg)
+
+Code generation and deploy process: 
+![Deploy process](https://github.com/Kevinpetschulat/NetflixRoulette/blob/master/vendor/DeploymentProcess.jpg)
