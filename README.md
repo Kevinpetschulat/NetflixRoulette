@@ -1,10 +1,10 @@
 # Netflix Roulette
 Webapplication for testing model driven architecture (Papyrus, Acceleo) and continuous delivery (Travis CI, Heroku). 
 
-##Static code documentation: 
+## Static code documentation: 
 https://netflixroulette-docs.herokuapp.com/generated/index.html
 
-##Frontend for webapplication: 
+## Frontend for webapplication: 
 https://netflixroulette.herokuapp.com/
 
 
