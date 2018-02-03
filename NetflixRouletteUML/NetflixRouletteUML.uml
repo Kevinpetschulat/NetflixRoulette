@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sentimentanalysis="http:///schemas/sentimentanalysis/_sBKzULyEEeeWWO_nb_go1g/1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/sentimentanalysis/_sBKzULyEEeeWWO_nb_go1g/1 sentiment-analysis.profile.uml#_sBVycLyEEeeWWO_nb_go1g">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sentimentanalysis="http:///schemas/sentimentanalysis/_6AyXgAjxEeixKpqtnqgUpg/2" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/sentimentanalysis/_6AyXgAjxEeixKpqtnqgUpg/2 NetflixRoulette.profile.uml#_6A0MsAjxEeixKpqtnqgUpg">
   <uml:Model xmi:id="_WBdYMPulEeed6NgIPjJs4A" name="NetflixRouletteUML">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_WLRbgPulEeed6NgIPjJs4A">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -139,17 +139,17 @@
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_auw4wAEfEeijJ5oicWlVLg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_auyt8AEfEeijJ5oicWlVLg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8QEfEeijJ5oicWlVLg" key="Version" value="0.0.2"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8gEfEeijJ5oicWlVLg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt8wEfEeijJ5oicWlVLg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt9AEfEeijJ5oicWlVLg" key="Date" value="2017-10-29"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_auyt9QEfEeijJ5oicWlVLg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LtPLIAjyEeixKpqtnqgUpg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtPLIQjyEeixKpqtnqgUpg" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtPLIgjyEeixKpqtnqgUpg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtPLIwjyEeixKpqtnqgUpg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtPLJAjyEeixKpqtnqgUpg" key="Date" value="2018-02-03"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtPLJQjyEeixKpqtnqgUpg" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_auxf0AEfEeijJ5oicWlVLg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="sentiment-analysis.profile.uml#_sBVycLyEEeeWWO_nb_go1g"/>
+        <references xmi:type="ecore:EPackage" href="NetflixRoulette.profile.uml#_6A0MsAjxEeixKpqtnqgUpg"/>
       </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="sentiment-analysis.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
+      <appliedProfile xmi:type="uml:Profile" href="NetflixRoulette.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
     </profileApplication>
   </uml:Model>
   <sentimentanalysis:Endpoint xmi:id="_cDTp0AEfEeijJ5oicWlVLg" base_Class="_ShQ4YAEKEeivNLgJD_H2_A"/>

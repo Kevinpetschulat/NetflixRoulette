@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_zfA6YLyDEeeWWO_nb_go1g" name="sentiment-analysis" metaclassReference="_2w13gLyDEeeWWO_nb_go1g _d4JqMLyEEeeWWO_nb_go1g">
   <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CIwyALyEEeeWWO_nb_go1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_6A0MsAjxEeixKpqtnqgUpg" name="sentimentanalysis" nsURI="http:///schemas/sentimentanalysis/_6AyXgAjxEeixKpqtnqgUpg/2" nsPrefix="sentimentanalysis">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MsQjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A0MsgjxEeixKpqtnqgUpg" key="originalName" value="sentiment-analysis"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A5sQAjxEeixKpqtnqgUpg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A5sQQjxEeixKpqtnqgUpg" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A5sQgjxEeixKpqtnqgUpg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A5sQwjxEeixKpqtnqgUpg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A5sRAjxEeixKpqtnqgUpg" key="Date" value="2018-02-03"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6A5sRQjxEeixKpqtnqgUpg" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6A0MswjxEeixKpqtnqgUpg" name="Endpoint">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MtAjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_4GhRALyDEeeWWO_nb_go1g"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_6A0MtQjxEeixKpqtnqgUpg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6A0MtwjxEeixKpqtnqgUpg" name="Handler">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MuAjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5b36YLyDEeeWWO_nb_go1g"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_6A0MuQjxEeixKpqtnqgUpg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6A0MuwjxEeixKpqtnqgUpg" name="Model">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MvAjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6PiL8LyDEeeWWO_nb_go1g"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_6A0MvQjxEeixKpqtnqgUpg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6A0MvwjxEeixKpqtnqgUpg" name="Read">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MwAjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fEObwLyEEeeWWO_nb_go1g"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_6A0MwQjxEeixKpqtnqgUpg" name="path" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_6A0MwwjxEeixKpqtnqgUpg" name="base_Operation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Operation"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_6A0MxQjxEeixKpqtnqgUpg" name="Write">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6A0MxgjxEeixKpqtnqgUpg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_oPn0ULyEEeeWWO_nb_go1g"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_6A0MxwjxEeixKpqtnqgUpg" name="path" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_6A0MyQjxEeixKpqtnqgUpg" name="base_Operation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Operation"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
     <contents xmi:type="ecore:EPackage" xmi:id="_sBVycLyEEeeWWO_nb_go1g" name="sentimentanalysis" nsURI="http:///schemas/sentimentanalysis/_sBKzULyEEeeWWO_nb_go1g/1" nsPrefix="sentimentanalysis">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sBVycbyEEeeWWO_nb_go1g" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sBVycryEEeeWWO_nb_go1g" key="originalName" value="sentiment-analysis"/>

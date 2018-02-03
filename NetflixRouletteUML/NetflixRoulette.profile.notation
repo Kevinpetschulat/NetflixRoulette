@@ -34,7 +34,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_4GhRDLyDEeeWWO_nb_go1g"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4GhRDbyDEeeWWO_nb_go1g"/>
     </children>
-    <element xmi:type="uml:Stereotype" href="sentiment-analysis.profile.uml#_4GhRALyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Stereotype" href="NetflixRoulette.profile.uml#_4GhRALyDEeeWWO_nb_go1g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4GhRAryDEeeWWO_nb_go1g" x="100" y="160"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_5cBEULyDEeeWWO_nb_go1g" type="Stereotype_Shape">
@@ -51,7 +51,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_5cBEW7yDEeeWWO_nb_go1g"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5cBEXLyDEeeWWO_nb_go1g"/>
     </children>
-    <element xmi:type="uml:Stereotype" href="sentiment-analysis.profile.uml#_5b36YLyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Stereotype" href="NetflixRoulette.profile.uml#_5b36YLyDEeeWWO_nb_go1g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5cBEUbyDEeeWWO_nb_go1g" x="240" y="160"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_6PiL8byDEeeWWO_nb_go1g" type="Stereotype_Shape">
@@ -68,7 +68,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_6PiL_LyDEeeWWO_nb_go1g"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6PiL_byDEeeWWO_nb_go1g"/>
     </children>
-    <element xmi:type="uml:Stereotype" href="sentiment-analysis.profile.uml#_6PiL8LyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Stereotype" href="NetflixRoulette.profile.uml#_6PiL8LyDEeeWWO_nb_go1g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6PiL8ryDEeeWWO_nb_go1g" x="380" y="160"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_d4JqMbyEEeeWWO_nb_go1g" type="Class_MetaclassShape">
@@ -95,7 +95,7 @@
     <children xmi:type="notation:DecorationNode" xmi:id="_fEPp4ryEEeeWWO_nb_go1g" type="Stereotype_NameLabel"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_fEPp47yEEeeWWO_nb_go1g" type="Stereotype_AttributeCompartment">
       <children xmi:type="notation:Shape" xmi:id="_je0XwLyEEeeWWO_nb_go1g" type="Property_ClassAttributeLabel">
-        <element xmi:type="uml:Property" href="sentiment-analysis.profile.uml#_jeqmwLyEEeeWWO_nb_go1g"/>
+        <element xmi:type="uml:Property" href="NetflixRoulette.profile.uml#_jeqmwLyEEeeWWO_nb_go1g"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_je0XwbyEEeeWWO_nb_go1g"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_fEPp5LyEEeeWWO_nb_go1g"/>
@@ -109,14 +109,14 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_fEPp67yEEeeWWO_nb_go1g"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fEPp7LyEEeeWWO_nb_go1g"/>
     </children>
-    <element xmi:type="uml:Stereotype" href="sentiment-analysis.profile.uml#_fEObwLyEEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Stereotype" href="NetflixRoulette.profile.uml#_fEObwLyEEeeWWO_nb_go1g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fEPp4byEEeeWWO_nb_go1g" x="620" y="160"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_oPn0UbyEEeeWWO_nb_go1g" type="Stereotype_Shape">
     <children xmi:type="notation:DecorationNode" xmi:id="_oPn0U7yEEeeWWO_nb_go1g" type="Stereotype_NameLabel"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_oPn0VLyEEeeWWO_nb_go1g" type="Stereotype_AttributeCompartment">
       <children xmi:type="notation:Shape" xmi:id="_pscXoLyEEeeWWO_nb_go1g" type="Property_ClassAttributeLabel">
-        <element xmi:type="uml:Property" href="sentiment-analysis.profile.uml#_psRYgLyEEeeWWO_nb_go1g"/>
+        <element xmi:type="uml:Property" href="NetflixRoulette.profile.uml#_psRYgLyEEeeWWO_nb_go1g"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_pscXobyEEeeWWO_nb_go1g"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_oPn0VbyEEeeWWO_nb_go1g"/>
@@ -130,15 +130,15 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_oPn0XLyEEeeWWO_nb_go1g"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oPn0XbyEEeeWWO_nb_go1g"/>
     </children>
-    <element xmi:type="uml:Stereotype" href="sentiment-analysis.profile.uml#_oPn0ULyEEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Stereotype" href="NetflixRoulette.profile.uml#_oPn0ULyEEeeWWO_nb_go1g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oPn0UryEEeeWWO_nb_go1g" x="800" y="160"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_zfOVwbyDEeeWWO_nb_go1g" name="diagram_compatibility_version" stringValue="1.3.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_zfOVwryDEeeWWO_nb_go1g"/>
   <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_zfOVw7yDEeeWWO_nb_go1g" diagramKindId="org.eclipse.papyrus.uml.diagram.profile">
-    <owner xmi:type="uml:Profile" href="sentiment-analysis.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
+    <owner xmi:type="uml:Profile" href="NetflixRoulette.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
   </styles>
-  <element xmi:type="uml:Profile" href="sentiment-analysis.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
+  <element xmi:type="uml:Profile" href="NetflixRoulette.profile.uml#_zfA6YLyDEeeWWO_nb_go1g"/>
   <edges xmi:type="notation:Connector" xmi:id="_2xy5x7yDEeeWWO_nb_go1g" type="StereotypeCommentLink" source="_2xMc0LyDEeeWWO_nb_go1g" target="_2xy5w7yDEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_2xy5yLyDEeeWWO_nb_go1g"/>
     <styles xmi:type="notation:EObjectValueStyle" xmi:id="_2xy5zLyDEeeWWO_nb_go1g" name="BASE_ELEMENT">
@@ -151,21 +151,21 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_-G9JcLyDEeeWWO_nb_go1g" type="Extension_Edge" source="_4GhRAbyDEeeWWO_nb_go1g" target="_2xMc0LyDEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_-G9JcbyDEeeWWO_nb_go1g"/>
-    <element xmi:type="uml:Extension" href="sentiment-analysis.profile.uml#_-GvuELyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Extension" href="NetflixRoulette.profile.uml#_-GvuELyDEeeWWO_nb_go1g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-G9JcryDEeeWWO_nb_go1g" points="[160, 160, -643984, -643984]$[300, 90, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-HRSgLyDEeeWWO_nb_go1g" id="(0.6,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-HRSgbyDEeeWWO_nb_go1g" id="(0.4,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_-hHV4LyDEeeWWO_nb_go1g" type="Extension_Edge" source="_5cBEULyDEeeWWO_nb_go1g" target="_2xMc0LyDEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_-hHV4byDEeeWWO_nb_go1g"/>
-    <element xmi:type="uml:Extension" href="sentiment-analysis.profile.uml#_-gzz4LyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Extension" href="NetflixRoulette.profile.uml#_-gzz4LyDEeeWWO_nb_go1g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-hHV4ryDEeeWWO_nb_go1g" points="[300, 160, -643984, -643984]$[280, 90, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-haQ0LyDEeeWWO_nb_go1g" id="(0.4,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-haQ0byDEeeWWO_nb_go1g" id="(0.4,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_-_HggLyDEeeWWO_nb_go1g" type="Extension_Edge" source="_6PiL8byDEeeWWO_nb_go1g" target="_2xMc0LyDEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_-_HggbyDEeeWWO_nb_go1g"/>
-    <element xmi:type="uml:Extension" href="sentiment-analysis.profile.uml#_--0lkLyDEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Extension" href="NetflixRoulette.profile.uml#_--0lkLyDEeeWWO_nb_go1g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-_HggryDEeeWWO_nb_go1g" points="[440, 160, -643984, -643984]$[280, 90, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-_U74LyDEeeWWO_nb_go1g" id="(0.6,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-_U74byDEeeWWO_nb_go1g" id="(0.4,1.0)"/>
@@ -182,14 +182,14 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_q7ioALyEEeeWWO_nb_go1g" type="Extension_Edge" source="_fEPp4LyEEeeWWO_nb_go1g" target="_d4JqMbyEEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_q7ioAbyEEeeWWO_nb_go1g"/>
-    <element xmi:type="uml:Extension" href="sentiment-analysis.profile.uml#_q7PtELyEEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Extension" href="NetflixRoulette.profile.uml#_q7PtELyEEeeWWO_nb_go1g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q7ioAryEEeeWWO_nb_go1g" points="[680, 160, -643984, -643984]$[760, 90, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q8MvULyEEeeWWO_nb_go1g" id="(0.49586776859504134,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q8MvUbyEEeeWWO_nb_go1g" id="(0.4,1.0)"/>
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_rhJ2gLyEEeeWWO_nb_go1g" type="Extension_Edge" source="_oPn0UbyEEeeWWO_nb_go1g" target="_d4JqMbyEEeeWWO_nb_go1g">
     <styles xmi:type="notation:FontStyle" xmi:id="_rhJ2gbyEEeeWWO_nb_go1g"/>
-    <element xmi:type="uml:Extension" href="sentiment-analysis.profile.uml#_rgpgMLyEEeeWWO_nb_go1g"/>
+    <element xmi:type="uml:Extension" href="NetflixRoulette.profile.uml#_rgpgMLyEEeeWWO_nb_go1g"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rhJ2gryEEeeWWO_nb_go1g" points="[860, 160, -643984, -643984]$[780, 90, -643984, -643984]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rhcxcLyEEeeWWO_nb_go1g" id="(0.49586776859504134,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rhcxcbyEEeeWWO_nb_go1g" id="(0.6,1.0)"/>
