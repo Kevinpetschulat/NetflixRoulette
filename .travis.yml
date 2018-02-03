@@ -21,9 +21,6 @@ jobs:
       script:
         - cd NetflixRouletteBackend
         - mvn deploy
-
-
-
     - stage: Unit- and integration test for backend
       script:
         - cd NetflixRouletteBackend
@@ -47,9 +44,6 @@ jobs:
         - git add --all
         - git commit -am "update documentation"
         - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRouletteDocs.git" master
-
-
-
     - stage: Deploy backend to staging
       script: skip
       before_deploy:
@@ -74,9 +68,6 @@ jobs:
         provider: heroku
         app: netflixroulette-docs
         api_key: $HEROKU_API_KEY
-
-
-
     - stage: Deploy backend to production
       script: skip
       before_deploy:
@@ -92,8 +83,6 @@ jobs:
       deploy:
         <<: *heroku
         app: netflixroulette
-
-
     - stage: Check production availability
       script:
         - 'curl https://netflixroulette.herokuapp.com/'
