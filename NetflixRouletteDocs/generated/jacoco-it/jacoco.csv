@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+NetflixRouletteBackend,at.fhv.netflix.handlers,AuthHandler,22,84,2,4,3,21,2,6,0,5
+NetflixRouletteBackend,at.fhv.netflix.handlers,HistoryHandler,0,51,0,6,0,16,0,7,0,4
+NetflixRouletteBackend,at.fhv.netflix.handlers,RecommendationHandler,2,142,4,8,1,28,4,5,0,3
+NetflixRouletteBackend,at.fhv.netflix,Application,13,0,0,0,4,0,3,0,3,0
+NetflixRouletteBackend,at.fhv.netflix,Application.new WebMvcConfigurerAdapter() {...},44,0,0,0,4,0,2,0,2,0
+NetflixRouletteBackend,at.fhv.netflix.models,HistoryItem,9,24,0,0,3,10,3,4,3,4
+NetflixRouletteBackend,at.fhv.netflix.models,History,4,11,0,0,2,3,1,2,1,2
+NetflixRouletteBackend,at.fhv.netflix.models,User,0,23,0,0,0,9,0,5,0,5
+NetflixRouletteBackend,at.fhv.netflix.models,Recommendation,9,24,0,0,3,10,3,4,3,4
+NetflixRouletteBackend,at.fhv.netflix.endpoints,RecommendationEndpoint,0,8,0,0,0,2,0,2,0,2
+NetflixRouletteBackend,at.fhv.netflix.endpoints,HistoryEndpoint,0,7,0,0,0,2,0,2,0,2
+NetflixRouletteBackend,at.fhv.netflix.endpoints,AuthEndpoint,0,6,0,0,0,2,0,2,0,2
