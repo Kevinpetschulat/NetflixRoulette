@@ -84,5 +84,6 @@ jobs:
         <<: *heroku
         app: netflixroulette
     - stage: check production availability
-      script: 'curl https://netflixroulette.herokuapp.com/'
-      script: 'curl https://netflixroulette-docs.herokuapp.com/generated/index.html'
+      script:
+        - 'curl https://netflixroulette.herokuapp.com/'
+        - 'curl https://netflixroulette-docs.herokuapp.com/generated/index.html'
