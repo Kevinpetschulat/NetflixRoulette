@@ -32,9 +32,10 @@ jobs:
         - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
         - cd ..
         - "git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git"
-        - cp -r NetflixRouletteBackend/target/site/jacoco-ut /NetflixRouletteDocs
-        - cp -r NetflixRouletteBackend/target/site/jacoco-it /NetflixRouletteDocs
-        - cp -r NetflixRouletteBackend/target/site/apidocs /NetflixRouletteDocs
+        - rm -rf NetflixRouletteDocs/generated/jacoco-ut NetflixRouletteDocs/generated/jacoco-it NetflixRouletteDocs/generated/apidocs
+        - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
+        - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
+        - cp -r NetflixRouletteBackend/target/site/apidocs NetflixRouletteDocs/generated/
         - git add --all
         - git commit -am "update documentation"
         - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRouletteDocs.git" master
