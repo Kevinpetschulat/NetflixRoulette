@@ -1,8 +1,11 @@
 package at.fhv.netflix.handlers;
 
+import java.io.IOException;
+
 // Start of user code (user defined imports)
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Request;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -25,7 +28,7 @@ public class RecommendationHandler {
 
 	private static RecommendationHandler INSTANCE;
 	
-	private RecommendationHandler(){
+	private RecommendationHandler() {
 	    // singleton
 	}
 	
@@ -53,8 +56,22 @@ public class RecommendationHandler {
 		HttpResponse responseDetails; 
 		String movieID; 
 		do {		// Sometimes the api returns a invalid movie id, because of this: loop 
-			HttpResponse responseRecommendation = Request.Get(urlRecommendation).execute().returnResponse();
-			String resultRecommendation = IOUtils.toString(responseRecommendation.getEntity().getContent(), STRING_CODING);
+			HttpResponse responseRecommendation = null;
+			try {
+				responseRecommendation = Request.Get(urlRecommendation).execute().returnResponse();
+			} catch (ClientProtocolException e) {
+				throw new Exception("responseRecommendation = Request.Get(urlRecommendation).execute().returnResponse();"); 
+			} catch (IOException e) {
+				throw new Exception("responseRecommendation = Request.Get(urlRecommendation).execute().returnResponse();"); 
+			}
+			String resultRecommendation = null;
+			try {
+				resultRecommendation = IOUtils.toString (responseRecommendation.getEntity().getContent(), STRING_CODING);
+			} catch (UnsupportedOperationException e) {
+				throw new Exception("resultRecommendation = IOUtils.toString (responseRecommendation.getEntity().getContent(), STRING_CODING);"); 
+			} catch (IOException e) {
+				throw new Exception("resultRecommendation = IOUtils.toString (responseRecommendation.getEntity().getContent(), STRING_CODING);"); 
+			}
 			JsonObject jsonObjectRecommendation = gson.fromJson(resultRecommendation, JsonObject.class);
 			movieID = gson.fromJson(jsonObjectRecommendation.get("id"), String.class);
 			
@@ -66,12 +83,25 @@ public class RecommendationHandler {
 
 			// Fetch movie details 
 			String urlDetails = URL_MOVIE_DETAILS + movieID; 
-			responseDetails = Request.Get(urlDetails).execute().returnResponse();		
+			try {
+				responseDetails = Request.Get(urlDetails).execute().returnResponse();
+			} catch (ClientProtocolException e) {
+				throw new Exception("responseDetails = Request.Get(urlDetails).execute().returnResponse();"); 
+			} catch (IOException e) {
+				throw new Exception("responseDetails = Request.Get(urlDetails).execute().returnResponse();"); 
+			}		
 		} while (responseDetails.getEntity() == null); 
 		
 		
 		
-		String resultDetails = IOUtils.toString(responseDetails.getEntity().getContent(), STRING_CODING);
+		String resultDetails = null; ;
+		try {
+			resultDetails = IOUtils.toString(responseDetails.getEntity().getContent(), STRING_CODING);
+		} catch (UnsupportedOperationException e) {
+			throw new Exception("resultDetails = IOUtils.toString(responseDetails.getEntity().getContent(), STRING_CODING);"); 
+		} catch (IOException e) {
+			throw new Exception("resultDetails = IOUtils.toString(responseDetails.getEntity().getContent(), STRING_CODING);"); 
+		}
 		JsonObject jsonObjectDetails = gson.fromJson(resultDetails, JsonObject.class);
 		String movieDetailsTitle = gson.fromJson(jsonObjectDetails.get(JSON_TITLE_ATTRIBUTE), String.class);
 		String movieDetailsOverview = gson.fromJson(jsonObjectDetails.get(JSON_OVERVIEW_ATTRIBUTE), String.class);
@@ -86,7 +116,11 @@ public class RecommendationHandler {
 		
 		
 		// Add history item 
-		HistoryHandler.getInstance().addHistory(token, genreId, res);
+		try {
+			HistoryHandler.getInstance().addHistory(token, genreId, res);
+		} catch (Exception e) {
+			throw new Exception("HistoryHandler.getInstance().addHistory(token, genreId, res);"); 
+		}
 
 		return res; 		
 		// End of user code
