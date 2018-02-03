@@ -3,25 +3,32 @@ $HOME/.m2/settings.xmllanguage: java
 
 jobs:
   include:
-    - stage: generator
+    - stage: Build generator
       language: java
       install:
         - cp .travis.settings.xml $HOME/.m2/settings.xml
       script:
         - cd NetflixRouletteGenerator
         - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven:acceleo-compile deploy
-    - stage: uml
+    - stage: UML: generate backend
       language: java
       script:
         - cd NetflixRouletteUML
         - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher
-    - stage: build backend
+    - stage: Build backend
       install:
         - cp .travis.settings.xml $HOME/.m2/settings.xml
       script:
         - cd NetflixRouletteBackend
         - mvn deploy
-    - stage: static code analysis
+
+
+
+    - stage: Unit- and integration test for backend
+      script:
+        - cd NetflixRouletteBackend
+        - mvn verify
+    - stage: Static code analysis
       language: java
       addons:
         sonarcloud:
@@ -40,7 +47,25 @@ jobs:
         - git add --all
         - git commit -am "update documentation"
         - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRouletteDocs.git" master
-    - stage: deploy code docs
+
+
+
+    - stage: Deploy backend to staging
+      script: skip
+      before_deploy:
+        - cd NetflixRouletteBackend
+      deploy: &heroku
+        provider: heroku
+        app: netflixroulette-backend-stage
+        api_key: $HEROKU_API_KEY
+    - stage: Deploy frontend to staging
+      script: skip
+      before_deploy:
+        - cd NetflixRouletteFrontend
+      deploy:
+        <<: *heroku
+        app: netflixroulette-stage
+    - stage: Deploy code docs
       script: skip
       before_deploy:
         - git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git
@@ -49,19 +74,10 @@ jobs:
         provider: heroku
         app: netflixroulette-docs
         api_key: $HEROKU_API_KEY
-    - stage: deploy to staging (backend)
-      script: skip
-      before_deploy:
-        - cd NetflixRouletteBackend
-      deploy: &heroku
-        provider: heroku
-        app: netflixroulette-backend-stage
-        api_key: $HEROKU_API_KEY
-    - stage: Unit test for backend
-      script:
-        - cd NetflixRouletteBackend
-        - mvn verify
-    - stage: deploy to production (backend)
+
+
+
+    - stage: Deploy backend to production
       script: skip
       before_deploy:
         - cd NetflixRouletteBackend
@@ -69,21 +85,16 @@ jobs:
         provider: heroku
         app: netflixroulette-backend
         api_key: $HEROKU_API_KEY
-    - stage: deploy to stage (frontend)
-      script: skip
-      before_deploy:
-        - cd NetflixRouletteFrontend
-      deploy:
-        <<: *heroku
-        app: netflixroulette-stage
-    - stage: deploy to production (frontend)
+    - stage: Deploy frontend to production
       script: skip
       before_deploy:
         - cd NetflixRouletteFrontend
       deploy:
         <<: *heroku
         app: netflixroulette
-    - stage: check production availability
+
+
+    - stage: Check production availability
       script:
         - 'curl https://netflixroulette.herokuapp.com/'
         - 'curl https://netflixroulette-docs.herokuapp.com/generated/index.html'
