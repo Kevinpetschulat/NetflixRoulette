@@ -10,7 +10,7 @@ jobs:
       script:
         - cd NetflixRouletteGenerator
         - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven:acceleo-compile deploy
-    - stage: uml	
+    - stage: uml
       language: java
       script:
         - cd NetflixRouletteUML
@@ -27,11 +27,11 @@ jobs:
           organization: str7946-github
           token: $SONAR_TOKEN
       script:
-	- cd NetflixRouletteBackend
+        - cd NetflixRouletteBackend
         - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
-	- cd .. 
-	- rm -rf NetflixRouletteDocs
-	- mkdir -p NetflixRouletteDocs/generated 
+        - cd ..
+        - rm -rf NetflixRouletteDocs
+        - mkdir -p NetflixRouletteDocs/generated 
         - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/apidocs NetflixRouletteDocs/generated/
@@ -43,7 +43,7 @@ jobs:
         provider: heroku
         app: netflixroulette-backend-stage
         api_key: $HEROKU_API_KEY
-    - stage: Unit test for backend (staging) 
+    - stage: Unit test for backend (staging)
       script:
         - cd NetflixRouletteBackend
         - mvn verify
