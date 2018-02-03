@@ -43,6 +43,7 @@ jobs:
     - stage: deploy code docs
       script: skip
       before_deploy:
+        - "git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git"
         - cd NetflixRouletteDocs
       deploy: &heroku
         provider: heroku
