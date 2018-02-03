@@ -2,7 +2,7 @@
 Webapplication for testing model driven architecture (Papyrus, Acceleo) and continuous delivery (Travis CI, Heroku). 
 
 ## Static code documentation: 
-https://netflixroulette-docs.herokuapp.com/generated/index.html
+https://netflixroulette-docs.herokuapp.com/
 
 ## Frontend for webapplication: 
 https://netflixroulette.herokuapp.com/
