@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/NetflixRouletteBackend/target/NetflixRouletteBackend-${env.TRAVIS_BUILD_NUMBER}-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/NetflixRouletteBackend/target/NetflixRouletteBackend-27-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
