@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NetflixRouletteBackend/src/main/main.iml" filepath="$PROJECT_DIR$/NetflixRouletteBackend/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetflixRouletteGenerator/src/main/main1.iml" filepath="$PROJECT_DIR$/NetflixRouletteGenerator/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sample projects (Kevin)/org.eclipse.acceleo.module.firstDemoAcceleo4/org.eclipse.acceleo.module.firstDemoAcceleo4.iml" filepath="$PROJECT_DIR$/Sample projects (Kevin)/org.eclipse.acceleo.module.firstDemoAcceleo4/org.eclipse.acceleo.module.firstDemoAcceleo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetflixRouletteBackend/src/test/test.iml" filepath="$PROJECT_DIR$/NetflixRouletteBackend/src/test/test.iml" />
+    </modules>
+  </component>
+</project>
