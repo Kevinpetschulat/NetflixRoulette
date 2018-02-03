@@ -36,6 +36,14 @@ jobs:
         - cp -r NetflixRouletteBackend/target/site/jacoco-ut NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/jacoco-it NetflixRouletteDocs/generated/
         - cp -r NetflixRouletteBackend/target/site/apidocs NetflixRouletteDocs/generated/
+    - stage: deploy code docs
+      script: skip
+      before_deploy:
+        - cd NetflixRouletteDocs
+      deploy: &heroku
+        provider: heroku
+        app: netflixroulette-docs
+        api_key: $HEROKU_API_KEY
     - stage: deploy to staging (backend)
       script: skip
       before_deploy:
