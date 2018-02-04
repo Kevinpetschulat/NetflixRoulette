@@ -1,6 +1,3 @@
-$HOME/.m2/settings.xmllanguage: java
-
-
 jobs:
   include:
     - stage: Build generator
