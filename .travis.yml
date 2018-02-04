@@ -61,10 +61,12 @@ jobs:
         app: netflixroulette-stage
     - stage: Deploy code docs
       script: skip
-      deploy: &heroku
-        provider: heroku
+      before_deploy:
+        - git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git
+        - cd NetflixRouletteDocs
+      deploy:
+        <<: *heroku
         app: netflixroulette-docs
-        api_key: $HEROKU_API_KEY
     - stage: Deploy backend to production
       script: skip
       before_deploy:
