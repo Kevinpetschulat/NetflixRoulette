@@ -53,22 +53,4 @@ $(function() {
             },
         });
     });
-
-    $("#btnClearHistory").on("click", function() {
-        	$.ajax({
-            	url: $('script[src*=app]').attr('data-backend') +"/clearHistory",
-            	type: "GET",
-            	data: {
-                	token: localStorage.getItem('token')
-            	},
-            	success: function (response) {
-       			 $("#history").html('');
-
-                	alert('History is now cleared');
-            	},
-            	error: function (response) {
-                	alert('could not clear your history, sorry!');
-            	},
-        	});
-    });
 })

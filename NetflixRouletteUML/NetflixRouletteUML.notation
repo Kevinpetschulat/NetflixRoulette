@@ -25,10 +25,6 @@
                 <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_wAjKcAEWEeiNCJi4XDiQYA"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_wBPuAQEWEeiNCJi4XDiQYA"/>
               </children>
-              <children xmi:type="notation:Shape" xmi:id="_nVkNQAmbEeiSZvcnAoFTsQ" type="Operation_ClassOperationLabel">
-                <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_nVD28AmbEeiSZvcnAoFTsQ"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_nVkNQQmbEeiSZvcnAoFTsQ"/>
-              </children>
               <styles xmi:type="notation:TitleStyle" xmi:id="_Sh38ZQEKEeivNLgJD_H2_A"/>
               <styles xmi:type="notation:SortingStyle" xmi:id="_Sh38ZgEKEeivNLgJD_H2_A"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_Sh38ZwEKEeivNLgJD_H2_A"/>
@@ -354,10 +350,6 @@
               <children xmi:type="notation:Shape" xmi:id="_P8VDMAEaEeiNCJi4XDiQYA" type="Operation_ClassOperationLabel">
                 <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_P75lYAEaEeiNCJi4XDiQYA"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_P8VDMQEaEeiNCJi4XDiQYA"/>
-              </children>
-              <children xmi:type="notation:Shape" xmi:id="_1wjQIAmbEeiSZvcnAoFTsQ" type="Operation_ClassOperationLabel">
-                <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_1wF9IAmbEeiSZvcnAoFTsQ"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_1wjQIQmbEeiSZvcnAoFTsQ"/>
               </children>
               <styles xmi:type="notation:TitleStyle" xmi:id="__tTJewEREeim1Ic1SyI2mw"/>
               <styles xmi:type="notation:SortingStyle" xmi:id="__tTJfAEREeim1Ic1SyI2mw"/>

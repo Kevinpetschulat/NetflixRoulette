@@ -51,7 +51,6 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent suggestions</h2>
-						<a href="#" class="button" id="btnClearHistory">Clear history</a>
 						<div class="row" id="history"></div>
 					</section>
 			</div>
