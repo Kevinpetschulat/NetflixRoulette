@@ -23,7 +23,6 @@ jobs:
         - cd NetflixRouletteBackend
         - mvn verify
     - stage: Static code analysis
-      language: java
       addons:
         sonarcloud:
           organization: str7946-github
