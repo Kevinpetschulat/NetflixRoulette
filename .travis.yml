@@ -12,6 +12,9 @@ jobs:
       script:
         - cd NetflixRouletteUML
         - mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher
+        - git add --all
+        - git commit -m 'Generate backend [ci skip]'
+        - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRoulette.git" master
     - stage: Build backend
       language: generic
       install:
