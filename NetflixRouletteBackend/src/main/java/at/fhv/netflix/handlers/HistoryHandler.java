@@ -46,6 +46,17 @@ public class HistoryHandler {
 		// End of user code
 	}
 	
+	public void clearHistory(String token) throws Exception {
+		// Start of user code getHistory
+		if (token == null || "".equals(token)) {
+			return; 
+		}
+		
+		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
+		user.setHistory(new at.fhv.netflix.models.History()); 
+		// End of user code
+	}
+	
 	// Start of user code (user defined operations)
 	
 	// End of user code

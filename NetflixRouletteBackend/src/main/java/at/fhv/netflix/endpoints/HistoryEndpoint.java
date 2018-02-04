@@ -18,6 +18,13 @@ public class HistoryEndpoint {
 		// End of user code
 	}
 	
+	@org.springframework.web.bind.annotation.GetMapping("clearHistory")
+	public void clearHistory(@org.springframework.web.bind.annotation.RequestParam("token") String token) throws Exception {
+		// Start of user code getHistory
+		at.fhv.netflix.handlers.HistoryHandler.getInstance().clearHistory(token);
+		// End of user code
+	}
+	
 	// Start of user code (user defined operations)
 	
 	// End of user code

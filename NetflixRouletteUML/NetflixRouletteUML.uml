@@ -13,6 +13,11 @@
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_P_ruoAEZEeiNCJi4XDiQYA" type="_mEjNoAEREeim1Ic1SyI2mw" direction="return"/>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_nVD28AmbEeiSZvcnAoFTsQ" name="clearHistory">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_97zaUAmbEeiSZvcnAoFTsQ" name="Token">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_an6LMAEREeim1Ic1SyI2mw" name="RecommendationEndpoint">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_fI5JcAEZEeiNCJi4XDiQYA" name="getRecommendation">
@@ -103,6 +108,11 @@
             </ownedParameter>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z1vYUAEaEeiNCJi4XDiQYA" name="result" type="_nXOWcAEREeim1Ic1SyI2mw"/>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_1wF9IAmbEeiSZvcnAoFTsQ" name="clearHistory">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_FAVNAAmcEeiSZvcnAoFTsQ" name="String">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_X45x0AESEeim1Ic1SyI2mw" name="AuthHandler">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_LJJBAAEaEeiNCJi4XDiQYA" name="getToken">
@@ -165,4 +175,5 @@
   <sentimentanalysis:Write xmi:id="_yIzhUAEfEeijJ5oicWlVLg" path="recommendation" base_Operation="_fI5JcAEZEeiNCJi4XDiQYA"/>
   <sentimentanalysis:Read xmi:id="_1gWE4AEfEeijJ5oicWlVLg" path="history" base_Operation="_wAjKcAEWEeiNCJi4XDiQYA"/>
   <sentimentanalysis:Write xmi:id="_3rP2MAEfEeijJ5oicWlVLg" path="login" base_Operation="_1-YTcAEZEeiNCJi4XDiQYA"/>
+  <sentimentanalysis:Read xmi:id="_dlBY4AmeEeiSZvcnAoFTsQ" path="clearHistory" base_Operation="_nVD28AmbEeiSZvcnAoFTsQ"/>
 </xmi:XMI>
