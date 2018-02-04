@@ -30,7 +30,7 @@ jobs:
         sonarcloud:
           organization: str7946-github
           token: $SONAR_TOKEN
-      before_deploy::
+      script:
         - cd NetflixRouletteBackend
         - mvn org.jacoco:jacoco-maven-plugin:prepare-agent javadoc:javadoc verify sonar:sonar
         - cd ..
@@ -43,10 +43,6 @@ jobs:
         - git add --all
         - git commit -am "update documentation"
         - git push "https://${TRAVIS_GITHUB_TOKEN}@github.com/Kevinpetschulat/NetflixRouletteDocs.git" master
-      deploy: &heroku
-          provider: heroku
-          app: netflixroulette-docs
-          api_key: $HEROKU_API_KEY
     - stage: Deploy backend to staging
       language: generic
       script: skip
