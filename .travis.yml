@@ -64,14 +64,6 @@ jobs:
         provider: heroku
         app: netflixroulette-backend
         api_key: $HEROKU_API_KEY
-    - stage: Deploy backend to production
-      script: skip
-      before_deploy:
-        - cd NetflixRouletteBackend
-      deploy:
-        provider: heroku
-        app: netflixroulette-backend
-        api_key: $HEROKU_API_KEY
     - stage: Deploy frontend to production
       script: skip
       before_deploy:
