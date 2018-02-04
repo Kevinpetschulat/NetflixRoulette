@@ -48,7 +48,7 @@ jobs:
       script: skip
       before_deploy:
         - cd NetflixRouletteBackend
-      deploy: &heroku
+      deploy:
         provider: heroku
         app: netflixroulette-backend-stage
         api_key: $HEROKU_API_KEY
@@ -57,21 +57,23 @@ jobs:
       before_deploy:
         - cd NetflixRouletteFrontend
       deploy:
-        <<: *heroku
+        provider: heroku
         app: netflixroulette-stage
+        api_key: $HEROKU_API_KEY
     - stage: Deploy documentation
       script: skip
       before_deploy:
         - git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git
         - cd NetflixRouletteDocs
       deploy:
-        <<: *heroku
+        provider: heroku
         app: netflixroulette-docs
+        api_key: $HEROKU_API_KEY
     - stage: Deploy backend to production
       script: skip
       before_deploy:
         - cd NetflixRouletteBackend
-      deploy: &heroku
+      deploy:
         provider: heroku
         app: netflixroulette-backend
         api_key: $HEROKU_API_KEY
@@ -80,8 +82,9 @@ jobs:
       before_deploy:
         - cd NetflixRouletteFrontend
       deploy:
-        <<: *heroku
+        provider: heroku
         app: netflixroulette
+        api_key: $HEROKU_API_KEY
     - stage: Check production availability
       script:
         - 'curl https://netflixroulette.herokuapp.com/'
