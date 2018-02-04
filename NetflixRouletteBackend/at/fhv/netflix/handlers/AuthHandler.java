@@ -24,14 +24,14 @@ public class AuthHandler {
 	    return INSTANCE;
 	}
 	
-	public at.fhv.netflix.models.User getToken() throws Exception {
-		// Start of user code getToken
+	public at.fhv.netflix.models.User getUser(String Token) throws Exception {
+		// Start of user code getUser
 		return null;
 		// End of user code
 	}
 	
-	public at.fhv.netflix.models.User getUser(String Token) throws Exception {
-		// Start of user code getUser
+	public at.fhv.netflix.models.User getToken() throws Exception {
+		// Start of user code getToken
 		return null;
 		// End of user code
 	}

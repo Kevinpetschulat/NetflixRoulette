@@ -11,7 +11,7 @@ public class RecommendationEndpoint {
 	// End of user code
 	
 	
-	@org.springframework.web.bind.annotation.PostMapping("recommendation")
+	@org.springframework.web.bind.annotation.PostMapping("invalid")
 	public at.fhv.netflix.models.Recommendation getRecommendation(@org.springframework.web.bind.annotation.RequestParam("token") String token, @org.springframework.web.bind.annotation.RequestParam("genreId") int genreId) throws Exception {
 		// Start of user code getRecommendation
 		return null;
