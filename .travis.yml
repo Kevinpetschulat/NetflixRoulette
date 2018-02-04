@@ -59,7 +59,7 @@ jobs:
       deploy:
         <<: *heroku
         app: netflixroulette-stage
-    - stage: Deploy code docs
+    - stage: Deploy documentation
       script: skip
       before_deploy:
         - git clone https://github.com/Kevinpetschulat/NetflixRouletteDocs.git
