@@ -26,6 +26,9 @@ public class HistoryHandler {
 	
 	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
 		// Start of user code addHistory
+		if (token == null || "".equals(token)) {
+			return; 
+		}
 		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
 		at.fhv.netflix.models.HistoryItem item = new at.fhv.netflix.models.HistoryItem();
         item.setRequested(java.time.Instant.now().toEpochMilli());
