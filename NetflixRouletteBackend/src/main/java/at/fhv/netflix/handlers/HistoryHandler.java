@@ -24,6 +24,17 @@ public class HistoryHandler {
 	    return INSTANCE;
 	}
 	
+	public void clearHistory(String token) throws Exception {
+		// Start of user code clearHistory
+		if (token == null || "".equals(token)) {
+			return; 
+		}
+		
+		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
+		user.setHistory(new at.fhv.netflix.models.History()); 
+		// End of user code
+	}
+	
 	public at.fhv.netflix.models.History getHistory(String token) throws Exception {
 		// Start of user code getHistory
 		if(token == null || "".equals(token)) {
@@ -45,18 +56,6 @@ public class HistoryHandler {
         user.getHistory().getItems().add(item);
 		// End of user code
 	}
-
-	public void clearHistory(String token) throws Exception {
-		// Start of user code getHistory
-		if (token == null || "".equals(token)) {
-			return; 
-		}
-		
-		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
-		user.setHistory(new at.fhv.netflix.models.History()); 
-		// End of user code
-	}
-
 	
 	// Start of user code (user defined operations)
 	

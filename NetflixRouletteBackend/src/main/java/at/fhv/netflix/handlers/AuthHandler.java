@@ -38,7 +38,7 @@ public class AuthHandler {
 	}
 	
 	public at.fhv.netflix.models.User getUser(String Token) throws Exception {
- 		// Start of user code getUser
+		// Start of user code getUser
 		
 		// Get the user by token or return null if the user does not exist
 		if (!users.containsKey(Token)) {

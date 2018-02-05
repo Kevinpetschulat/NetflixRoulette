@@ -21,13 +21,13 @@
               <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BPNysAETEeiNCJi4XDiQYA" source="PapyrusCSSForceValue">
                 <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BPOZwAETEeiNCJi4XDiQYA" key="collapsed" value="true"/>
               </eAnnotations>
-              <children xmi:type="notation:Shape" xmi:id="_wBPuAAEWEeiNCJi4XDiQYA" type="Operation_ClassOperationLabel">
-                <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_wAjKcAEWEeiNCJi4XDiQYA"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_wBPuAQEWEeiNCJi4XDiQYA"/>
-              </children>
               <children xmi:type="notation:Shape" xmi:id="_HHQNgAmtEeiSZvcnAoFTsQ" type="Operation_ClassOperationLabel">
                 <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_HGy6gAmtEeiSZvcnAoFTsQ"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_HHQNgQmtEeiSZvcnAoFTsQ"/>
+              </children>
+              <children xmi:type="notation:Shape" xmi:id="_wBPuAAEWEeiNCJi4XDiQYA" type="Operation_ClassOperationLabel">
+                <element xmi:type="uml:Operation" href="NetflixRouletteUML.uml#_wAjKcAEWEeiNCJi4XDiQYA"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_wBPuAQEWEeiNCJi4XDiQYA"/>
               </children>
               <styles xmi:type="notation:TitleStyle" xmi:id="_Sh38ZQEKEeivNLgJD_H2_A"/>
               <styles xmi:type="notation:SortingStyle" xmi:id="_Sh38ZgEKEeivNLgJD_H2_A"/>

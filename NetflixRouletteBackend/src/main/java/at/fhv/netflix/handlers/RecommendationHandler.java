@@ -1,6 +1,5 @@
 package at.fhv.netflix.handlers;
 
-
 // Start of user code (user defined imports)
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
@@ -26,7 +25,7 @@ public class RecommendationHandler {
 
 	private static RecommendationHandler INSTANCE;
 	
-	private RecommendationHandler() {
+	private RecommendationHandler(){
 	    // singleton
 	}
 	
@@ -56,9 +55,10 @@ public class RecommendationHandler {
 		do {		// Sometimes the api returns a invalid movie id, because of this: loop 
 			HttpResponse responseRecommendation = null;
 			responseRecommendation = Request.Get(urlRecommendation).execute().returnResponse();
-	
+			
 			String resultRecommendation = null;
 			resultRecommendation = IOUtils.toString (responseRecommendation.getEntity().getContent(), STRING_CODING);
+			
 			JsonObject jsonObjectRecommendation = gson.fromJson(resultRecommendation, JsonObject.class);
 			movieID = gson.fromJson(jsonObjectRecommendation.get("id"), String.class);
 			
@@ -75,10 +75,9 @@ public class RecommendationHandler {
 		} while (responseDetails.getEntity() == null); 
 		
 		
-		
 		String resultDetails = null; ;
 		resultDetails = IOUtils.toString(responseDetails.getEntity().getContent(), STRING_CODING);
-	
+		
 		JsonObject jsonObjectDetails = gson.fromJson(resultDetails, JsonObject.class);
 		String movieDetailsTitle = gson.fromJson(jsonObjectDetails.get(JSON_TITLE_ATTRIBUTE), String.class);
 		String movieDetailsOverview = gson.fromJson(jsonObjectDetails.get(JSON_OVERVIEW_ATTRIBUTE), String.class);
@@ -94,7 +93,7 @@ public class RecommendationHandler {
 		
 		// Add history item 
 		HistoryHandler.getInstance().addHistory(token, genreId, res);
-	
+		
 		return res; 		
 		// End of user code
 	}

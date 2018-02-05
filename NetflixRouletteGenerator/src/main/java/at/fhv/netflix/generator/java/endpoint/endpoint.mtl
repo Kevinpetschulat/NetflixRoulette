@@ -26,9 +26,9 @@
 	
 	[for (anOperation : Operation | aClass.ownedOperation->union(aClass.allRealizedInterfaces().ownedOperation))]
 	[if anOperation.hasStereotype('Read')]
-	@org.springframework.web.bind.annotation.GetMapping("[anOperation.getValue(anOperation.getAppliedStereotype('sentiment-analysis::Read'), 'path')/]")
+	@org.springframework.web.bind.annotation.GetMapping("[anOperation.getValue(anOperation.getAppliedStereotype('netflixRoulette::Read'), 'path')/]")
 	[elseif anOperation.hasStereotype('Write')]
-	@org.springframework.web.bind.annotation.PostMapping("[anOperation.getValue(anOperation.getAppliedStereotype('sentiment-analysis::Write'), 'path')/]")
+	@org.springframework.web.bind.annotation.PostMapping("[anOperation.getValue(anOperation.getAppliedStereotype('netflixRoulette::Write'), 'path')/]")
 	[/if]
 	[genVisibility()/][genAbstract()/][genFinal()/][genStatic()/][genReturn()/] [genName()/]([genWebOperationParameters()/]) throws Exception {
 		// [protected (anOperation.name)]
