@@ -46,6 +46,7 @@
 						<ul class="actions">
 							<li><a href="#" class="button" id="btnFindMovie">Find your movie!</a></li>
 						</ul>
+						<span id="message"><span>
 					</section>
 
 				<!-- Two -->
