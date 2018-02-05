@@ -24,14 +24,20 @@ public class HistoryHandler {
 	    return INSTANCE;
 	}
 	
+	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
+		// Start of user code addHistory
+		
+		// End of user code
+	}
+	
 	public at.fhv.netflix.models.History getHistory(String token) throws Exception {
 		// Start of user code getHistory
 		return null;
 		// End of user code
 	}
 	
-	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
-		// Start of user code addHistory
+	public void clearHistory(String token) throws Exception {
+		// Start of user code clearHistory
 		
 		// End of user code
 	}

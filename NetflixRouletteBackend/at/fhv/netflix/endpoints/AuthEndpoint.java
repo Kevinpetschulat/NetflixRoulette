@@ -11,7 +11,7 @@ public class AuthEndpoint {
 	// End of user code
 	
 	
-	@org.springframework.web.bind.annotation.PostMapping("login")
+	@org.springframework.web.bind.annotation.PostMapping("invalid")
 	public at.fhv.netflix.models.User getToken() throws Exception {
 		// Start of user code getToken
 		return null;
