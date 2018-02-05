@@ -24,14 +24,14 @@ public class HistoryHandler {
 	    return INSTANCE;
 	}
 	
-	public void clearHistory(String token) throws Exception {
-		// Start of user code clearHistory
-		if (token == null || "".equals(token)) {
-			return; 
-		}
-		
+	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
+		// Start of user code addHistory
 		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
-		user.setHistory(new at.fhv.netflix.models.History()); 
+		at.fhv.netflix.models.HistoryItem item = new at.fhv.netflix.models.HistoryItem();
+        item.setRequested(java.time.Instant.now().toEpochMilli());
+        item.setGenreId(genreId);
+        item.setResult(result);
+        user.getHistory().getItems().add(item);
 		// End of user code
 	}
 	
@@ -46,14 +46,14 @@ public class HistoryHandler {
 		// End of user code
 	}
 	
-	public void addHistory(String token, int genreId, at.fhv.netflix.models.Recommendation result) throws Exception {
-		// Start of user code addHistory
+	public void clearHistory(String token) throws Exception {
+		// Start of user code clearHistory
+		if (token == null || "".equals(token)) {
+			return; 
+		}
+		
 		at.fhv.netflix.models.User user = AuthHandler.getInstance().getUser(token);
-		at.fhv.netflix.models.HistoryItem item = new at.fhv.netflix.models.HistoryItem();
-        item.setRequested(java.time.Instant.now().toEpochMilli());
-        item.setGenreId(genreId);
-        item.setResult(result);
-        user.getHistory().getItems().add(item);
+		user.setHistory(new at.fhv.netflix.models.History()); 
 		// End of user code
 	}
 	

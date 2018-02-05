@@ -24,6 +24,18 @@ public class AuthHandler {
 	    return INSTANCE;
 	}
 	
+	public at.fhv.netflix.models.User getUser(String Token) throws Exception {
+		// Start of user code getUser
+		
+		// Get the user by token or return null if the user does not exist
+		if (!users.containsKey(Token)) {
+			return null; 
+		}
+		
+        	return users.get(Token);
+ 		// End of user code
+	}
+	
 	public at.fhv.netflix.models.User getToken() throws Exception {
 		// Start of user code getToken
 		at.fhv.netflix.models.User user = new at.fhv.netflix.models.User(); 
@@ -35,18 +47,6 @@ public class AuthHandler {
 	
 		return user; 
 		// End of user code
-	}
-	
-	public at.fhv.netflix.models.User getUser(String Token) throws Exception {
-		// Start of user code getUser
-		
-		// Get the user by token or return null if the user does not exist
-		if (!users.containsKey(Token)) {
-			return null; 
-		}
-		
-        	return users.get(Token);
- 		// End of user code
 	}
 	
 	// Start of user code (user defined operations)	

@@ -11,14 +11,14 @@ public class HistoryEndpoint {
 	// End of user code
 	
 	
-	@org.springframework.web.bind.annotation.GetMapping("history")
+	@org.springframework.web.bind.annotation.GetMapping("clearHistory")
 	public void clearHistory(@org.springframework.web.bind.annotation.RequestParam("token") String token) throws Exception {
 		// Start of user code clearHistory
 		at.fhv.netflix.handlers.HistoryHandler.getInstance().clearHistory(token);
 		// End of user code
 	}
 	
-	@org.springframework.web.bind.annotation.GetMapping("clearHistory")
+	@org.springframework.web.bind.annotation.GetMapping("history")
 	public at.fhv.netflix.models.History getHistory(@org.springframework.web.bind.annotation.RequestParam("token") String token) throws Exception {
 		// Start of user code getHistory
 		return at.fhv.netflix.handlers.HistoryHandler.getInstance().getHistory(token);
